@@ -7,7 +7,7 @@ namespace TestShop_RavenDB.Core.Entities
     {
         public string CustomerId { get; }
         public decimal Discount { get; } = 0;
-        private List<OrderLine> _lines = new List<OrderLine>();
+        private List<OrderLine> _lines = new();
 
         public IReadOnlyCollection<OrderLine> Lines
         {

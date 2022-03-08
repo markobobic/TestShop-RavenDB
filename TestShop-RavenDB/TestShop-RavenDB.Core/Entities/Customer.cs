@@ -4,7 +4,16 @@ namespace TestShop_RavenDB.Core.Entities
 {
     public class Customer : Entity
     {
-        public string Name { get; set; }
+        public Customer(CustomerName name, Email email)
+        {
+            Name = name;
+            Email = email;
+        }
+        public Customer()
+        {
+
+        }
+        public CustomerName Name { get; set; }
         public Email Email { get; set; }
 
     }

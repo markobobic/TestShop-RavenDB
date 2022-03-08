@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Raven.Client.Documents;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,8 +26,18 @@ namespace TestShop_RavenDB.WebApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
+            services.AddSingleton<IDocumentStore>(provider =>
+            {
+                var store = new DocumentStore()
+                {
+                    Urls = new string[] { "http://127.0.0.1:8080/" },
+                    Database = "RavenStore"
+                };
+                store.Initialize();
+                return store;
+            });
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "TestShop_RavenDB.WebApi", Version = "v1" });
