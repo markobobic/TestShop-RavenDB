@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using TestShop_RavenDB.Core.DTOs;
 using TestShop_RavenDB.Core.Entities;
+using TestShop_RavenDB.Core.Extensions;
 using TestShop_RavenDB.Core.ValueObjects;
 using TestShop_RavenDB.Platform;
 
@@ -49,8 +50,8 @@ namespace TestShop_RavenDB.WebApi.Controllers
             var orderLines = _mapper.Map<IEnumerable<OrderLine>>(orderCreateDTO.OrderLines);
 
             using var db = _store.OpenAsyncSession();
-            if (_orderLineService.CheckIfAllOrderdedProductsExist(orderLines)
-               .Any(foundedProduct => !foundedProduct)) 
+            var areProductsValid = await _orderLineService.CheckIfAllOrderdedProductsExist(orderLines).ToListAsync();
+            if (areProductsValid.Any(foundedProduct => !foundedProduct))
                 return BadRequest("Product does not exist!");
 
             var orderPopulated = await _orderLineService.AddProductsToOrderLine(orderLines, order.CustomerId, orderCreateDTO.Discount);
