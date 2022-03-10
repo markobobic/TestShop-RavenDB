@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TestShop-RavenDB.Core\TestShop-RavenDB.Core.csproj" />
+    <ProjectReference Include="..\TestShop-RavenDB.Platform\TestShop-RavenDB.Platform.csproj" />
   </ItemGroup>
 
 </Project>

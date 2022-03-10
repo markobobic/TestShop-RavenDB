@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestShop-RavenDB.Core", "TestShop-RavenDB.Core\TestShop-RavenDB.Core.csproj", "{36F6C96C-6DC4-4F83-9A61-79FBF97ED0B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestShop-RavenDB.WebApi", "TestShop-RavenDB.WebApi\TestShop-RavenDB.WebApi.csproj", "{EAD4D239-5500-45C2-9CEA-7BC31CE3FB4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestShop-RavenDB.WebApi", "TestShop-RavenDB.WebApi\TestShop-RavenDB.WebApi.csproj", "{EAD4D239-5500-45C2-9CEA-7BC31CE3FB4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestShop-RavenDB.Platform", "TestShop-RavenDB.Platform\TestShop-RavenDB.Platform.csproj", "{85A842E1-AEF2-4B3F-A18B-A76CCAE3A3CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{EAD4D239-5500-45C2-9CEA-7BC31CE3FB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EAD4D239-5500-45C2-9CEA-7BC31CE3FB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EAD4D239-5500-45C2-9CEA-7BC31CE3FB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85A842E1-AEF2-4B3F-A18B-A76CCAE3A3CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85A842E1-AEF2-4B3F-A18B-A76CCAE3A3CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85A842E1-AEF2-4B3F-A18B-A76CCAE3A3CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85A842E1-AEF2-4B3F-A18B-A76CCAE3A3CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

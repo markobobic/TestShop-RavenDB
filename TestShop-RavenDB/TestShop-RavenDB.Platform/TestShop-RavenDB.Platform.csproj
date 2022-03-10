@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>TestShop_RavenDB.Platform</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RavenDB.Client" Version="5.3.100" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TestShop-RavenDB.Core\TestShop-RavenDB.Core.csproj" />
+  </ItemGroup>
+
+</Project>

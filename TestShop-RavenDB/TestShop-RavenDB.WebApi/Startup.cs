@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TestShop_RavenDB.Platform;
 
 namespace TestShop_RavenDB.WebApi
 {
@@ -28,6 +29,7 @@ namespace TestShop_RavenDB.WebApi
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddControllers();
+            services.AddScoped(typeof(OrderLineService));
             services.AddSingleton<IDocumentStore>(provider =>
             {
                 var store = new DocumentStore()

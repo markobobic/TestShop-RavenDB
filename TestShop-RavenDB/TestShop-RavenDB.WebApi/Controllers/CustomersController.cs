@@ -12,11 +12,11 @@ namespace TestShop_RavenDB.WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class CustomerController : ControllerBase
+    public class CustomersController : ControllerBase
     {
         private readonly IDocumentStore _store;
         private readonly IMapper _mapper;
-        public CustomerController(IDocumentStore store, IMapper mapper)
+        public CustomersController(IDocumentStore store, IMapper mapper)
         {
             _store = store;
             _mapper = mapper;
